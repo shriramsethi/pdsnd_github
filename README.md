@@ -1,15 +1,19 @@
-### Date created
-Include the date you created this project and README file.
+### This project was created on 20 april 2020
 
-### Project Title
-Replace the Project Title
+### Project title is "Bikeshare data analysis"
 
-### Description
-Describe what your project is about and what it does
+### Desctiption of the project:
+the project is all about analysis of bikeshare of three cities of US.
+The project is based on python and libraries that are included are numpy and pandas.
+In this project the user will be given some options to explore data in the console.
 
-### Files used
-Include the files used
+### Files that are being used
+bikesshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project is a part of udacity nanodegree program
+and this project is forked from udacity's github repository.
 
