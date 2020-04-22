@@ -90,6 +90,32 @@ def station_stats(df):
     print('-'*40)
 
 
+def trip_duration_stats(df):
+    """Displays statistics on the total and average trip duration."""
+
+    print('\nCalculating Trip Duration...\n')
+    start_time = time.time()
+    # TO DO: display total travel time
+        
+    # TO DO: display mean travel time
+       
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+def user_stats(df):
+    """Displays statistics on bikeshare users."""
+
+    print('\nCalculating User Stats...\n')
+    start_time = time.time()
+
+    # TO DO: Display counts of user types
+    
+    # TO DO: Display counts of gender
+    
+    # TO DO: Display earliest, most recent, and most common year of birth
+    
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 
 
