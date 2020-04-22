@@ -154,7 +154,60 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def user_stats(df):
+    """Displays statistics on bikeshare users."""
 
+    print('\nCalculating User Stats...\n')
+    start_time = time.time()
+
+    # TO DO: Display counts of user types
+    if 'User Type' in df.columns:
+        print("Count of User types", pd.DataFrame(df['User Type'].value_counts()))
+    
+    print("")
+
+    # TO DO: Display counts of gender
+    if 'Gender' in df.columns:
+        print("Count of Gender types", pd.DataFrame(df['Gender'].value_counts()))
+        print("")
+        # TO DO: Display earliest, most recent, and most common year of birth
+    if 'Birth Year' in df.columns:
+        print("most earliest year of birth is ", int(df['Birth Year'].head(1).values[0]) )
+        print("")
+        print("most recent year of birth is ", int(df['Birth Year'].tail(1).values[0]) )
+        print("")
+        print("Most common year of birth is ", int(df['Birth Year'].value_counts().idxmax()))
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
+def display_data(df):
+    while True:
+        usr_inpt = input("Would you like to display Raw Data (please type 'yes' or 'no' )\n").lower()
+        if usr_inpt == 'yes':
+            r1 = 0
+            r2 = 5
+            print(df.iloc[r1:r2,:])
+            while True:
+                check_inpt = input("would you like to see 5 more rows(type 'yes' or 'no')\n ").lower()
+                if check_inpt == 'yes':
+                    r1+=5
+                    r2+=5
+                    print(df.iloc[r1:r2,:])
+                    continue
+                elif check_inpt == 'no':
+                    break
+                else:
+                    print("please enter a valid input\n")
+                    continue
+                break
+            break
+        elif usr_inpt == 'no':
+            break
+        else:
+            print("Please enter a valid input \n")
+            continue
 
 
 def main():
