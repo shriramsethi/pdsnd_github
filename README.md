@@ -4,7 +4,8 @@
 
 ### Desctiption of the project:
 the project is all about analysis of bikeshare of three cities of US.
-The project is based on python and libraries that are included are numpy and pandas
+The project is based on python and libraries that are included are numpy and pandas.
+In this project the user will be given some options to explore data in the console.
 
 ### Files that are being used
 bikesshare.py
