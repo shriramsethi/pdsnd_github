@@ -101,6 +101,44 @@ def load_data(city, month, day):
     # return df.fillna("Not Available", inplace = True)
 
 
+def time_stats(df):
+    """Displays statistics on the most frequent times of travel."""
+
+    print('\nCalculating The Most Frequent Times of Travel...\n')
+    start_time = time.time()
+
+    # TO DO: display the most common month
+    print("Most common month is '",df['month'].value_counts().idxmax(),"'")
+
+    # TO DO: display the most common day of week
+    print("Most common day of week is '",df['day_of_week'].value_counts().idxmax(),"'")
+
+    # TO DO: display the most common start hour
+    print("Most common start hour is '",df['Start Time'].dt.hour.value_counts().idxmax(),"'")
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
+def station_stats(df):
+    """Displays statistics on the most popular stations and trip."""
+
+    print('\nCalculating The Most Popular Stations and Trip...\n')
+    start_time = time.time()
+
+    # TO DO: display most commonly used start station
+    print("most commonly used start station is", df['Start Station'].value_counts().idxmax())
+
+    # TO DO: display most commonly used end station
+    print("most commonly used end station is", df['End Station'].value_counts().idxmax())
+
+    # TO DO: display most frequent combination of start station and end station trip
+    print("Most frequent combination of start station and end station trip is", (df['Start Station']+df['End Station']).value_counts().idxmax())
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
 
 
 
