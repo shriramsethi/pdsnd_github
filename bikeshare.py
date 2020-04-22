@@ -57,7 +57,37 @@ def load_data(city, month, day):
     # return df.fillna("Not Available", inplace = True)
 
 
+def time_stats(df):
+    """Displays statistics on the most frequent times of travel."""
 
+    print('\nCalculating The Most Frequent Times of Travel...\n')
+    start_time = time.time()
+
+    # TO DO: display the most common month
+    
+
+    # TO DO: display the most common day of week
+    
+    # TO DO: display the most common start hour
+    
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
+def station_stats(df):
+    """Displays statistics on the most popular stations and trip."""
+
+    print('\nCalculating The Most Popular Stations and Trip...\n')
+    start_time = time.time()
+
+    # TO DO: display most commonly used start station
+    
+    # TO DO: display most commonly used end station
+    
+    # TO DO: display most frequent combination of start station and end station trip
+    
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 
 
